@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Собери машину</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <script src="javascript.js"></script>
+    <style>
+        .container {
+        position: relative;
+        }
+
+        .door {
+        position: absolute;
+        background-color:aqua;
+        top: 25%;
+        left:57%;
+        height: 40%;
+        width: 10%;
+        opacity: 0;
+        }
+        .door:hover {
+            opacity: 0.3;
+        }
+
+        .wheel {
+        position: absolute;
+        background-color:aqua;
+        top: 68%;
+        left:50%;
+        height: 20%;
+        width: 8%;
+        opacity: 0;
+        }
+        .wheel:hover {
+            opacity: 0.3;
+        }
+        .headlight {
+        position: absolute;
+        background-color:aqua;
+        top: 64%;
+        left:41%;
+        height: 10%;
+        width: 4%;
+        opacity: 0;
+        }
+
+        .headlight:hover {
+            opacity: 0.3;
+        }
+        .hood {
+        position: absolute;
+        background-color:aqua;
+        top: 44%;
+        left:32%;
+        height: 20%;
+        width: 20%;
+        opacity: 0;
+        }
+        .hood:hover {
+            opacity: 0.3;
+        }
+        .window {
+        position: absolute;
+        background-color:aqua;
+        top: 25%;
+        left:39%;
+        height: 15%;
+        width: 16%;
+        opacity: 0;
+        }
+        .window:hover {
+            opacity: 0.3;
+        }
+        .headlight {
+        position: absolute;
+        background-color:aqua;
+        top: 64%;
+        left:41%;
+        height: 10%;
+        width: 4%;
+        opacity: 0;
+        }
+
+        .headlight:hover {
+            opacity: 0.3;
+        }
+        .hidden {
+        display: none;
+        }
+
+        img { 
+            height: auto;
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .parts {
+            opacity:0
+        }
+        .parts:hover {
+            opacity:1
+        }
+        h1{
+            text-align: center;
+        }
+    </style> 
+
+</head>
+
+<body>
+    <div style="display: none;" class="ecsp ecsp-SingleProduct-v2 ecsp-Product ec-Product-741248041" itemtype="http://schema.org/Product" data-single-product-id="741248041"><div class="ecsp-title" itemprop="name" style="display:none;" content="Колесо"></div><div customprop="addtobag"></div></div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?9967568&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script>
+    <h1>Соберите автомобиль</h1>
+    <h2>Для того, чтобы собрать автомобиль, вам нужно кликнуть на:</h2>
+    <ul>
+        <li id="1">Стекло</li>
+        <li id="2">Колесо</li>
+        <li id="3">Капот</li>
+        <li id="4">Фару</li>
+        <li id="5">Дверь</li>
+    </ul>
+
+    <div class="container">
+        <img src="car.png" id="car">
+            <div class="door" onclick="addItem(741234551)" alt="Дверь"></div>
+            <div class="wheel" onclick="addItem(741248041)"  alt="Колесо"></div>
+            <div class="window" onclick="addItem(741248076)" alt="Переднее стекло"></div>
+            <div class="hood" onclick="addItem(741248075)"   alt="Капот"></div>
+            <div class="headlight" onclick="addItem(741238312)"  alt="Фара"></div>
+    </div>
+        <h1 id="carReady" class="hidden">Вы собрали автомобиль</h1>
+        <script>
+            Ecwid.OnAPILoaded.add(function() {
+                console.log("Ecwid JS API is loaded.");
+                console.log("Ecwid store ID: "+Ecwid.getOwnerId());
+            });
+        </script>
+</body>
+
+</html>
